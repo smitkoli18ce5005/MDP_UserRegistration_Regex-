@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+        .header-div{
+            text-align: center;
+        }
+        .main-div{
+            height: 100vh;
+        }
+        .header-div > h1{
+            font-family: 'Pacifico', cursive;
+            font-size: 66px;
+            text-decoration: underline;
+            font-style: italic;
+            color: rgb(95, 95, 95);
+            text-shadow: 1px 3px black;
+        }
+        .elements-div{
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-gap: 2%;
+            width: 30%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 1%;
+            border: 2px solid black;
+            border-radius: 5mm;
+            box-shadow: 2px 2px grey;
+        }
+        .element{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1%;
+        }
+        .label{
+            padding: 5%;
+            border: 2px solid black;
+            border-radius: 5mm;
+            width: 200px;
+            text-align: center;
+        }
+        .value{
+            padding: 5%;
+            border: 2px solid black;
+            border-radius: 5mm;
+        }
+        .value-error{
+            padding: 5%;
+            border: 2px solid red;
+            border-radius: 5mm;
+            color: red;
+        }
+        .value-success{
+            padding: 5%;
+            border: 2px solid green;
+            border-radius: 5mm;
+            color: green;
+        }
+        button{
+            grid-column: span 2;
+            padding: 2%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid black;
+            border-radius: 5mm;
+            text-align: center;
+            background-color: silver;
+            width: 200px;
+        }
+        input{
+            width: 96%;
+            padding: 2%;
+            border: 1px solid black;
+            border-radius: 5mm;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <div class="header-div">
+            <h1>Form</h1>
+        </div>
+        <div class="elements-div">
+            <div class="element">
+                <div class="label">
+                    <label for="username">Username</label>
+                    <br><small><br><br></small>
+                </div>
+                <div class="value">
+                    <input type="text" id="username" placeholder="enter username..."><br>
+                    <small></small>
+                </div>
+            </div>
+            <div class="element">
+                <div class="label">
+                    <label for="email">Email-ID</label>
+                    <br><small><br><br></small>
+                </div>
+                <div class="value">
+                    <input type="email" id="email" placeholder="enter email..."><br>
+                    <small></small>
+                </div>
+            </div>
+            <div class="element">
+                <div class="label">
+                    <label for="password1">Password</label>
+                    <br><small><br><br></small>
+                </div>
+                <div class="value">
+                    <input type="password" id="password1" placeholder="enter password..."><br>
+                    <small></small>
+                </div>
+            </div>
+            <div class="element">
+                <div class="label">
+                    <label for="password2">Confirm password</label>
+                    <br><small><br><br></small>
+                </div>
+                <div class="value">
+                    <input type="password" id="password2" placeholder="confirm password..."><br>
+                    <small></small>
+                </div>
+            </div>
+            <div class="element">
+                <button onclick="validate()">Submit</button>
+        </div>
+    </div>
+    <script src="../jss/forms.js"></script>
+</body>
+</html>
